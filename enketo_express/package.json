@@ -22,7 +22,7 @@
     },
     "contributors": [],
     "scripts": {
-        "preinstall": "pwd && ./scripts/preinstall",
+        "preinstall": "pwd && bash scripts/preinstall",
         "start": "node .",
         "test": "grunt test",
         "test-browser": "grunt test-browser",
