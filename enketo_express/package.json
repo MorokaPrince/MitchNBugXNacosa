@@ -88,7 +88,8 @@
         "grunt-karma": "^4.0.2",
         "grunt-mocha-test": "^0.13.3",
         "grunt-sass": "^3.1.0",
-        "grunt-shell-spawn": "^0.4.0"
+        "grunt-shell-spawn": "^0.4.0",
+        "esbuild": "^0.16.17"
     },
     "devDependencies": {
         "@babel/core": "^7.22.10",
@@ -105,7 +106,6 @@
         "chai": "^4.3.7",
         "chai-as-promised": "^7.1.1",
         "docdash": "^1.2.0",
-        "esbuild": "^0.16.17",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.10.0",
         "eslint-import-resolver-typescript": "^3.6.0",
