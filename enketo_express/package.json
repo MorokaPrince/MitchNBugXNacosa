@@ -77,7 +77,8 @@
         "valid-url": "^1.0.9",
         "vex-dialog-enketo": "github:enketo/vex-dialog-enketo#b6e0f01",
         "vex-js": "^4.1.0",
-        "xml2js": "^0.5.0"
+        "xml2js": "^0.5.0",
+        "node-sass": "^7.0.3"
     },
     "devDependencies": {
         "@babel/core": "^7.22.10",
@@ -134,7 +135,6 @@
         "markdown-eslint-parser": "^1.2.1",
         "mocha": "^9.2.2",
         "nock": "^13.3.3",
-        "node-sass": "^7.0.3",
         "nyc": "^15.1.0",
         "prettier": "^2.8.8",
         "rimraf": "^3.0.2",
