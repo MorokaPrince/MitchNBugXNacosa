@@ -6,6 +6,7 @@ const xml2js = require("xml2js");
 const fs = require("fs");
 const crypto = require("crypto");
 const path = require("path");
+const Submission = require('../models/Submission');
 
 router.post("/submissions", upload.any(), async (req, res) => {
   try {
@@ -19,7 +20,9 @@ router.post("/submissions", upload.any(), async (req, res) => {
       parsed = req.body;
     }
 
-    console.log("Received ODK submission", parsed);
+    const submission = new Submission({ data: parsed });
+    await submission.save();
+    console.log("Saved ODK submission to database");
 
     res.status(201).json({ status: "ok", data: parsed });
   } catch (err) {

@@ -69,28 +69,49 @@ Enketo will run on port 8005 by default.
 
 ## Deployment
 
+### Prerequisites for External Databases
+Before deploying, set up external Redis and MongoDB instances. You can use cloud providers like Redis Labs, AWS ElastiCache, MongoDB Atlas, or self-hosted instances.
+
 ### Backend Deployment (Render)
 1. Connect repository to Render
 2. Select Node.js runtime
 3. Set build command: `npm install`
 4. Set start command: `npm start`
-5. Configure environment variables if needed
+5. Configure environment variables:
+   - `MONGODB_URI`: Connection string for your external MongoDB instance (e.g., `mongodb+srv://username:password@cluster.mongodb.net/database`)
+   - `PORT`: 5001 (optional, defaults to 5001)
 
 ### Enketo Express Deployment (Render)
 1. Use the included Dockerfile
 2. Set environment variables:
    - `ENKETO_API_KEY`: Your Enketo API key
    - `ENKETO_SECRET`: Encryption secret (32 characters)
+   - `ENKETO_REDIS_MAIN_URL`: Connection URL for main Redis database (e.g., `redis://username:password@host:port`)
+   - `ENKETO_REDIS_CACHE_URL`: Connection URL for cache Redis database (e.g., `redis://username:password@host:port`)
    - `PORT`: 8005
 3. Deploy as web service
 
 ### Environment Variables
+For Backend:
+```
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
+PORT=5001
+```
+
 For Enketo:
 ```
 ENKETO_API_KEY=your_api_key_here
 ENKETO_SECRET=your_32_char_secret
+ENKETO_REDIS_MAIN_URL=redis://username:password@host:port
+ENKETO_REDIS_CACHE_URL=redis://username:password@host:port
 PORT=8005
 ```
+
+### Additional Steps for Custom Databases
+- Ensure your external Redis and MongoDB instances are accessible from Render's network
+- Configure firewall rules to allow connections from Render's IP ranges if necessary
+- Test database connections locally before deploying
+- Monitor database performance and scale as needed
 
 ## Usage
 
