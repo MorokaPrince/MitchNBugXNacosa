@@ -188,7 +188,7 @@ describe('Config Model', () => {
         it('parses a redis url to its components', () => {
             stubEnv(
                 'ENKETO_REDIS_MAIN_URL',
-                'redis://h:pwd@ec2-54-221-230-53.compute-1.amazonaws.com:6869'
+                'rediss://h:pwd@ec2-54-221-230-53.compute-1.amazonaws.com:6869'
             );
             config = loadConfig();
             expect(config.server.redis.main.host).to.equal(

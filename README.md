@@ -86,8 +86,8 @@ Before deploying, set up external Redis and MongoDB instances. You can use cloud
 2. Set environment variables:
    - `ENKETO_API_KEY`: Your Enketo API key
    - `ENKETO_SECRET`: Encryption secret (32 characters)
-   - `ENKETO_REDIS_MAIN_URL`: Connection URL for main Redis database (e.g., `redis://username:password@host:port`)
-   - `ENKETO_REDIS_CACHE_URL`: Connection URL for cache Redis database (e.g., `redis://username:password@host:port`)
+   - `ENKETO_REDIS_MAIN_URL`: Connection URL for main Redis database (e.g., `rediss://username:password@host:port`)
+   - `ENKETO_REDIS_CACHE_URL`: Connection URL for cache Redis database (e.g., `rediss://username:password@host:port`)
    - `PORT`: 8005
 3. Deploy as web service
 
@@ -102,8 +102,8 @@ For Enketo:
 ```
 ENKETO_API_KEY=your_api_key_here
 ENKETO_SECRET=your_32_char_secret
-ENKETO_REDIS_MAIN_URL=redis://username:password@host:port
-ENKETO_REDIS_CACHE_URL=redis://username:password@host:port
+ENKETO_REDIS_MAIN_URL=rediss://username:password@host:port
+ENKETO_REDIS_CACHE_URL=rediss://username:password@host:port
 PORT=8005
 ```
 
