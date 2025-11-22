@@ -84,11 +84,12 @@ Before deploying, set up external Redis and MongoDB instances. You can use cloud
 ### Enketo Express Deployment (Render)
 1. Use the included Dockerfile
 2. Set environment variables:
-   - `ENKETO_API_KEY`: Your Enketo API key
-   - `ENKETO_SECRET`: Encryption secret (32 characters)
-   - `ENKETO_REDIS_MAIN_URL`: Connection URL for main Redis database (e.g., `rediss://username:password@host:port`)
-   - `ENKETO_REDIS_CACHE_URL`: Connection URL for cache Redis database (e.g., `rediss://username:password@host:port`)
-   - `PORT`: 8005
+    - `ENKETO_API_KEY`: Your Enketo API key
+    - `ENKETO_ENCRYPTION_KEY`: Encryption key for sensitive data (e.g., `s0m3v3rys3cr3tk3y`)
+    - `ENKETO_LESS_SECURE_ENCRYPTION_KEY`: Encryption key for URL obfuscation (e.g., `this $3cr3t key is crackable`)
+    - `ENKETO_REDIS_MAIN_URL`: Connection URL for main Redis database (e.g., `rediss://username:password@host:port`)
+    - `ENKETO_REDIS_CACHE_URL`: Connection URL for cache Redis database (e.g., `rediss://username:password@host:port`)
+    - `PORT`: 8005
 3. Deploy as web service
 
 ### Environment Variables
@@ -101,11 +102,16 @@ PORT=5001
 For Enketo:
 ```
 ENKETO_API_KEY=your_api_key_here
-ENKETO_SECRET=your_32_char_secret
+ENKETO_ENCRYPTION_KEY=s0m3v3rys3cr3tk3y
+ENKETO_LESS_SECURE_ENCRYPTION_KEY=this $3cr3t key is crackable
 ENKETO_REDIS_MAIN_URL=rediss://username:password@host:port
 ENKETO_REDIS_CACHE_URL=rediss://username:password@host:port
 PORT=8005
 ```
+
+**Note on Encryption Keys:**
+- `ENKETO_ENCRYPTION_KEY`: Used to encrypt sensitive data like form server credentials. Generate a strong, random key (e.g., using `openssl rand -hex 32` for a 64-character hex string). Never change this key after initial setup unless compromised.
+- `ENKETO_LESS_SECURE_ENCRYPTION_KEY`: Used to obfuscate URLs for single-submission forms. Can be any string, but should be different from the main encryption key. The example value is acceptable for development but should be changed for production.
 
 ### Additional Steps for Custom Databases
 - Ensure your external Redis and MongoDB instances are accessible from Render's network
