@@ -1,0 +1,1953 @@
+
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <head>
+    <title>Full Household Survey</title>
+    <model>
+      <instance>
+        <data id="full_survey" version="1">
+          <respondent_role/>
+          <respondent_age/>
+          <respondent_gender/>
+          <household_size/>
+          <household_vulnerable/>
+          <education_level/>
+          <employed/>
+          <monthly_income/>
+          <dwelling_type/>
+          <drinking_water_source/>
+          <toilet_facility/>
+          <cooking_energy/>
+          <service_disruptions/>
+          <disruption_impact/>
+          <healthcare_location/>
+          <healthcare_access_difficulty/>
+          <access_reasons/>
+          <healthcare_last_time/>
+          <difficulties_last_time/>
+          <chronic_appointment_miss/>
+          <appointment_miss_reason/>
+          <meal_skip_past_week/>
+          <meal_reduce_past_month/>
+          <support_had_2024/>
+          <support_still_2025/>
+          <support_reduced_2025/>
+          <support_need_2026/>
+          <support_priority/>
+          <support_lost_reasons/>
+          <support_lost_impact/>
+          <food_support_past_3_months/>
+          <food_support_sources/>
+          <food_support_linkages/>
+          <food_support_comfort/>
+          <clinic_travel_time/>
+          <clinic_cost/>
+          <clinic_delay_safety/>
+          <clinic_delay_reason/>
+          <clinic_turn_back/>
+          <communication_respect/>
+          <issue_addressed/>
+          <trust_health_workers/>
+          <input_opportunity/>
+          <input_feedback/>
+          <problem_solving_channels/>
+          <last_resolved_problem/>
+          <promise_completion/>
+          <promise_completed/>
+          <promise_who_completed/>
+          <promise_informed/>
+          <chronic_conditions/>
+          <chronic_on_treatment/>
+          <chronic_medication_support/>
+          <hiv_test_past_year/>
+          <hiv_self_screen_offer/>
+          <tb_screen_past_year/>
+          <art_tb_current/>
+          <art_tb_support/>
+          <art_tb_miss_reasons/>
+          <medicine_miss_food/>
+          <clinic_committee_heard/>
+          <clinic_committee_hear_how/>
+          <clinic_committee_help/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/respondent_role" type="select1" required="true()"/>
+      <bind nodeset="/data/respondent_age" type="int" required="true()"/>
+      <bind nodeset="/data/respondent_gender" type="select1" required="true()"/>
+      <bind nodeset="/data/household_size" type="int" required="true()"/>
+      <bind nodeset="/data/household_vulnerable" type="select" required="true()"/>
+      <bind nodeset="/data/education_level" type="select1" required="true()"/>
+      <bind nodeset="/data/employed" type="select1" required="true()"/>
+      <bind nodeset="/data/monthly_income" type="select1" required="true()"/>
+      <bind nodeset="/data/dwelling_type" type="select1" required="true()"/>
+      <bind nodeset="/data/drinking_water_source" type="select1" required="true()"/>
+      <bind nodeset="/data/toilet_facility" type="select1" required="true()"/>
+      <bind nodeset="/data/cooking_energy" type="select1" required="true()"/>
+      <bind nodeset="/data/service_disruptions" type="select" required="true()"/>
+      <bind nodeset="/data/disruption_impact" type="select" required="true()"/>
+      <bind nodeset="/data/healthcare_location" type="select1" required="true()"/>
+      <bind nodeset="/data/healthcare_access_difficulty" type="select1" required="true()"/>
+      <bind nodeset="/data/access_reasons" type="select" required="false()"/>
+      <bind nodeset="/data/healthcare_last_time" type="select1" required="true()"/>
+      <bind nodeset="/data/difficulties_last_time" type="select" required="false()"/>
+      <bind nodeset="/data/chronic_appointment_miss" type="select1" required="true()"/>
+      <bind nodeset="/data/appointment_miss_reason" type="select" required="false()"/>
+      <bind nodeset="/data/meal_skip_past_week" type="select1" required="true()"/>
+      <bind nodeset="/data/meal_reduce_past_month" type="select1" required="true()"/>
+      <bind nodeset="/data/support_had_2024" type="select" required="true()"/>
+      <bind nodeset="/data/support_still_2025" type="select" required="true()"/>
+      <bind nodeset="/data/support_reduced_2025" type="select" required="true()"/>
+      <bind nodeset="/data/support_need_2026" type="select" required="true()"/>
+      <bind nodeset="/data/support_priority" type="select1" required="true()"/>
+      <bind nodeset="/data/support_lost_reasons" type="select" required="false()"/>
+      <bind nodeset="/data/support_lost_impact" type="select" required="false()"/>
+      <bind nodeset="/data/food_support_past_3_months" type="select1" required="true()"/>
+      <bind nodeset="/data/food_support_sources" type="select" required="false()"/>
+      <bind nodeset="/data/food_support_linkages" type="select" required="false()"/>
+      <bind nodeset="/data/food_support_comfort" type="select1" required="false()"/>
+      <bind nodeset="/data/clinic_travel_time" type="int" required="true()"/>
+      <bind nodeset="/data/clinic_cost" type="decimal" required="true()"/>
+      <bind nodeset="/data/clinic_delay_safety" type="select1" required="true()"/>
+      <bind nodeset="/data/clinic_delay_reason" type="select1" required="false()"/>
+      <bind nodeset="/data/clinic_turn_back" type="select1" required="true()"/>
+      <bind nodeset="/data/communication_respect" type="select1" required="true()"/>
+      <bind nodeset="/data/issue_addressed" type="select1" required="true()"/>
+      <bind nodeset="/data/trust_health_workers" type="select1" required="true()"/>
+      <bind nodeset="/data/input_opportunity" type="select1" required="true()"/>
+      <bind nodeset="/data/input_feedback" type="select1" required="false()"/>
+      <bind nodeset="/data/problem_solving_channels" type="select" required="true()"/>
+      <bind nodeset="/data/last_resolved_problem" type="select1" required="true()"/>
+      <bind nodeset="/data/promise_completion" type="select1" required="true()"/>
+      <bind nodeset="/data/promise_completed" type="select1" required="false()"/>
+      <bind nodeset="/data/promise_who_completed" type="select1" required="false()"/>
+      <bind nodeset="/data/promise_informed" type="select1" required="false()"/>
+      <bind nodeset="/data/chronic_conditions" type="select" required="true()"/>
+      <bind nodeset="/data/chronic_on_treatment" type="select" required="false()"/>
+      <bind nodeset="/data/chronic_medication_support" type="select" required="false()"/>
+      <bind nodeset="/data/hiv_test_past_year" type="select1" required="true()"/>
+      <bind nodeset="/data/hiv_self_screen_offer" type="select" required="true()"/>
+      <bind nodeset="/data/tb_screen_past_year" type="select1" required="true()"/>
+      <bind nodeset="/data/art_tb_current" type="select1" required="true()"/>
+      <bind nodeset="/data/art_tb_support" type="select" required="false()"/>
+      <bind nodeset="/data/art_tb_miss_reasons" type="select" required="false()"/>
+      <bind nodeset="/data/medicine_miss_food" type="select1" required="true()"/>
+      <bind nodeset="/data/clinic_committee_heard" type="select1" required="true()"/>
+      <bind nodeset="/data/clinic_committee_hear_how" type="select1" required="false()"/>
+      <bind nodeset="/data/clinic_committee_help" type="select1" required="true()"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </head>
+  <body>
+    <group ref="/data" appearance="field-list">
+      <label>Household Survey</label>
+
+      <select1 ref="/data/respondent_role">
+        <label>Respondent role in household</label>
+        <item>
+          <label>Head of household</label>
+          <value>head</value>
+        </item>
+        <item>
+          <label>Spouse/Partner</label>
+          <value>spouse</value>
+        </item>
+        <item>
+          <label>Adult child</label>
+          <value>adult_child</value>
+        </item>
+        <item>
+          <label>Parent of head</label>
+          <value>parent</value>
+        </item>
+        <item>
+          <label>Other adult family member</label>
+          <value>other_family</value>
+        </item>
+        <item>
+          <label>Non-family member</label>
+          <value>non_family</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <input ref="/data/respondent_age">
+        <label>Age of respondent</label>
+        <hint>number years</hint>
+      </input>
+
+      <select1 ref="/data/respondent_gender">
+        <label>Gender of respondent</label>
+        <item>
+          <label>Female</label>
+          <value>female</value>
+        </item>
+        <item>
+          <label>Male</label>
+          <value>male</value>
+        </item>
+        <item>
+          <label>Another gender</label>
+          <value>other</value>
+        </item>
+        <item>
+          <label>Prefer not to say</label>
+          <value>prefer_not</value>
+        </item>
+      </select1>
+
+      <input ref="/data/household_size">
+        <label>Including yourself, how many people live in this household currently?</label>
+        <hint>number persons</hint>
+      </input>
+
+      <select ref="/data/household_vulnerable">
+        <label>Does your household include any of the following? (Tick all that apply)</label>
+        <item>
+          <label>Children under 5 years</label>
+          <value>children_under_5</value>
+        </item>
+        <item>
+          <label>Elderly persons (60+ years)</label>
+          <value>elderly</value>
+        </item>
+        <item>
+          <label>Persons living with a disability</label>
+          <value>disability</value>
+        </item>
+        <item>
+          <label>Persons living with a chronic illness (requiring regular medication)</label>
+          <value>chronic_illness</value>
+        </item>
+        <item>
+          <label>Persons with mental health conditions</label>
+          <value>mental_health</value>
+        </item>
+        <item>
+          <label>None of the above</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>Prefer not to say</label>
+          <value>prefer_not</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/education_level">
+        <label>What is your level of education</label>
+        <item>
+          <label>No schooling</label>
+          <value>no_schooling</value>
+        </item>
+        <item>
+          <label>Completed Primary</label>
+          <value>primary</value>
+        </item>
+        <item>
+          <label>Some Secondary</label>
+          <value>some_secondary</value>
+        </item>
+        <item>
+          <label>Completed Matric</label>
+          <value>matric</value>
+        </item>
+        <item>
+          <label>Certificate/Diploma</label>
+          <value>certificate</value>
+        </item>
+        <item>
+          <label>Bachelor's Degree or Higher</label>
+          <value>degree</value>
+        </item>
+        <item>
+          <label>Prefer not to say</label>
+          <value>prefer_not</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/employed">
+        <label>Are you employed</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/monthly_income">
+        <label>Household monthly income level (best estimate)</label>
+        <item>
+          <label>No income</label>
+          <value>no_income</value>
+        </item>
+        <item>
+          <label>< R 2000</label>
+          <value>under_2000</value>
+        </item>
+        <item>
+          <label>R 2000 - R 4999</label>
+          <value>2000_4999</value>
+        </item>
+        <item>
+          <label>R5 000 , R 9999</label>
+          <value>5000_9999</value>
+        </item>
+        <item>
+          <label>R10 000 - R19 999</label>
+          <value>10000_19999</value>
+        </item>
+        <item>
+          <label>>= R20 000</label>
+          <value>20000_plus</value>
+        </item>
+        <item>
+          <label>Prefer not to say</label>
+          <value>prefer_not</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/dwelling_type">
+        <label>What type of dwelling does your household live in?</label>
+        <item>
+          <label>House (detached)</label>
+          <value>detached_house</value>
+        </item>
+        <item>
+          <label>Semi-detached</label>
+          <value>semi_detached</value>
+        </item>
+        <item>
+          <label>Townhouse/Cluster</label>
+          <value>townhouse</value>
+        </item>
+        <item>
+          <label>Flat/Apartment</label>
+          <value>flat</value>
+        </item>
+        <item>
+          <label>Informal dwelling/Shack</label>
+          <value>informal</value>
+        </item>
+        <item>
+          <label>Backyard room/Shack</label>
+          <value>backyard</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/drinking_water_source">
+        <label>What is your household's main source of drinking water?</label>
+        <item>
+          <label>Piped inside dwelling</label>
+          <value>piped_inside</value>
+        </item>
+        <item>
+          <label>Piped in yard</label>
+          <value>piped_yard</value>
+        </item>
+        <item>
+          <label>Public tap/Standpipe</label>
+          <value>public_tap</value>
+        </item>
+        <item>
+          <label>Borehole/Tube well</label>
+          <value>borehole</value>
+        </item>
+        <item>
+          <label>Protected well/spring</label>
+          <value>protected_well</value>
+        </item>
+        <item>
+          <label>Unprotected well/spring</label>
+          <value>unprotected_well</value>
+        </item>
+        <item>
+          <label>Rainwater collection</label>
+          <value>rainwater</value>
+        </item>
+        <item>
+          <label>Tanker/Cart</label>
+          <value>tanker</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/toilet_facility">
+        <label>What is your household's main toilet facility?</label>
+        <item>
+          <label>Flush (connected to sewer)</label>
+          <value>flush_sewer</value>
+        </item>
+        <item>
+          <label>Flush (septic tank)</label>
+          <value>flush_septic</value>
+        </item>
+        <item>
+          <label>Pit latrine with slab</label>
+          <value>pit_slab</value>
+        </item>
+        <item>
+          <label>Pit latrine without slab/Open pit</label>
+          <value>pit_no_slab</value>
+        </item>
+        <item>
+          <label>Chemical toilet</label>
+          <value>chemical</value>
+        </item>
+        <item>
+          <label>Bucket toilet</label>
+          <value>bucket</value>
+        </item>
+        <item>
+          <label>No facility (bush/field)</label>
+          <value>no_facility</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/cooking_energy">
+        <label>What is your household's main energy source for cooking?</label>
+        <item>
+          <label>Electricity</label>
+          <value>electricity</value>
+        </item>
+        <item>
+          <label>Gas</label>
+          <value>gas</value>
+        </item>
+        <item>
+          <label>Paraffin</label>
+          <value>paraffin</value>
+        </item>
+        <item>
+          <label>Wood</label>
+          <value>wood</value>
+        </item>
+        <item>
+          <label>Coal</label>
+          <value>coal</value>
+        </item>
+        <item>
+          <label>Animal dung</label>
+          <value>dung</value>
+        </item>
+        <item>
+          <label>Solar</label>
+          <value>solar</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select ref="/data/service_disruptions">
+        <label>In the past 30 days, did your household experience any of the following service disruptions? (Tick all that apply)</label>
+        <item>
+          <label>No running water</label>
+          <value>no_water</value>
+        </item>
+        <item>
+          <label>No functioning toilet</label>
+          <value>no_toilet</value>
+        </item>
+        <item>
+          <label>No electricity</label>
+          <value>no_electricity</value>
+        </item>
+        <item>
+          <label>None of the above</label>
+          <value>none</value>
+        </item>
+      </select>
+
+      <select ref="/data/disruption_impact">
+        <label>In the past month did these disruptions cause anyone in your household to face these? (Tick all that apply)</label>
+        <item>
+          <label>Loss of work/income opportunity</label>
+          <value>loss_work</value>
+        </item>
+        <item>
+          <label>Miss School/education</label>
+          <value>miss_school</value>
+        </item>
+        <item>
+          <label>Loss of a healthcare visit</label>
+          <value>loss_healthcare</value>
+        </item>
+        <item>
+          <label>Missed CHW or social care worker home visit</label>
+          <value>missed_chw</value>
+        </item>
+        <item>
+          <label>None/N/A</label>
+          <value>none</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/healthcare_location">
+        <label>Where do you usually seek healthcare when needed?</label>
+        <item>
+          <label>Government clinic</label>
+          <value>gov_clinic</value>
+        </item>
+        <item>
+          <label>Public hospital</label>
+          <value>public_hospital</value>
+        </item>
+        <item>
+          <label>Private doctor</label>
+          <value>private_doctor</value>
+        </item>
+        <item>
+          <label>Traditional healer</label>
+          <value>traditional</value>
+        </item>
+        <item>
+          <label>Mobile clinic</label>
+          <value>mobile_clinic</value>
+        </item>
+        <item>
+          <label>Nowhere</label>
+          <value>nowhere</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/healthcare_access_difficulty">
+        <label>In the past 12 months, have you experienced difficulty accessing health services?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/access_reasons">
+        <label>If yes, main reasons (select up to 3)</label>
+        <item>
+          <label>Long waiting times</label>
+          <value>long_wait</value>
+        </item>
+        <item>
+          <label>Clinic closures</label>
+          <value>clinic_closure</value>
+        </item>
+        <item>
+          <label>Staff shortages</label>
+          <value>staff_shortage</value>
+        </item>
+        <item>
+          <label>Service fees</label>
+          <value>fees</value>
+        </item>
+        <item>
+          <label>Transport costs</label>
+          <value>transport_cost</value>
+        </item>
+        <item>
+          <label>Service discontinued</label>
+          <value>service_discontinued</value>
+        </item>
+        <item>
+          <label>Didn't know where to go</label>
+          <value>dont_know_where</value>
+        </item>
+        <item>
+          <label>Safety concerns</label>
+          <value>safety</value>
+        </item>
+        <item>
+          <label>Stigma</label>
+          <value>stigma</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/healthcare_last_time">
+        <label>The last time you or a household member needed healthcare or social support, were you able to get the help needed?</label>
+        <item>
+          <label>Yes, fully</label>
+          <value>yes_fully</value>
+        </item>
+        <item>
+          <label>Partly</label>
+          <value>partly</value>
+        </item>
+        <item>
+          <label>No, not at all</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Haven't needed help recently</label>
+          <value>not_needed</value>
+        </item>
+      </select1>
+
+      <select ref="/data/difficulties_last_time">
+        <label>What were the main difficulties that time? (select up to 3)</label>
+        <item>
+          <label>Couldn't afford transport/fees</label>
+          <value>afford_transport</value>
+        </item>
+        <item>
+          <label>Facility too far</label>
+          <value>too_far</value>
+        </item>
+        <item>
+          <label>Safety concerns traveling</label>
+          <value>safety_travel</value>
+        </item>
+        <item>
+          <label>Long queues</label>
+          <value>long_queues</value>
+        </item>
+        <item>
+          <label>Turned away/told to return</label>
+          <value>turned_away</value>
+        </item>
+        <item>
+          <label>Didn't know where to go</label>
+          <value>dont_know_where</value>
+        </item>
+        <item>
+          <label>Missing documents</label>
+          <value>missing_docs</value>
+        </item>
+        <item>
+          <label>Didn't trust provider</label>
+          <value>dont_trust</value>
+        </item>
+        <item>
+          <label>Stigma/embarrassment</label>
+          <value>stigma</value>
+        </item>
+        <item>
+          <label>Work/family obligations</label>
+          <value>work_family</value>
+        </item>
+        <item>
+          <label>Service not available</label>
+          <value>service_unavailable</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/chronic_appointment_miss">
+        <label>In the past 30 days, did anyone in your household miss a scheduled appointment or medicine collection for a chronic condition?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/appointment_miss_reason">
+        <label>If Yes, what was the main reason? (Choose up to 2)</label>
+        <item>
+          <label>Safety concerns</label>
+          <value>safety</value>
+        </item>
+        <item>
+          <label>Transport cost</label>
+          <value>transport_cost</value>
+        </item>
+        <item>
+          <label>Long queues / time constraints</label>
+          <value>long_queues</value>
+        </item>
+        <item>
+          <label>No food at dose time</label>
+          <value>no_food</value>
+        </item>
+        <item>
+          <label>Stock-out</label>
+          <value>stock_out</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/meal_skip_past_week">
+        <label>In the past 7 days, did anyone in your household skip a meal because there wasn't enough food?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/meal_reduce_past_month">
+        <label>In the past 30 days, did your household reduce meal size or choose cheaper foods because of cost?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/support_had_2024">
+        <label>For each type of support listed in the below table, please tell us: Had in 2024</label>
+        <item>
+          <label>Clinic / healthcare when needed</label>
+          <value>clinic_healthcare</value>
+        </item>
+        <item>
+          <label>Regular medication supply (incl. chronic / ARVs)</label>
+          <value>regular_medication</value>
+        </item>
+        <item>
+          <label>HIV / TB services support</label>
+          <value>hiv_tb_support</value>
+        </item>
+        <item>
+          <label>Mental health / psychosocial support</label>
+          <value>mental_health_support</value>
+        </item>
+        <item>
+          <label>Substance use support</label>
+          <value>substance_support</value>
+        </item>
+        <item>
+          <label>Disability / rehab and support</label>
+          <value>disability_support</value>
+        </item>
+        <item>
+          <label>Community Health Worker home visits</label>
+          <value>chw_visits</value>
+        </item>
+        <item>
+          <label>Social worker support</label>
+          <value>social_worker</value>
+        </item>
+        <item>
+          <label>Food support (kitchen/parcels)</label>
+          <value>food_support</value>
+        </item>
+        <item>
+          <label>Childcare / after-school / grant help</label>
+          <value>childcare</value>
+        </item>
+        <item>
+          <label>School-based health or psychosocial support</label>
+          <value>school_health</value>
+        </item>
+        <item>
+          <label>Youth-friendly reproductive health services</label>
+          <value>youth_reproductive</value>
+        </item>
+        <item>
+          <label>Transport assistance / vouchers</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>Safety / security mediation. (e.g., neighbourhood watch, CPF, violence de-escalation)</label>
+          <value>safety_mediation</value>
+        </item>
+        <item>
+          <label>WASH improvements (water / sanitation / hygiene)</label>
+          <value>wash_improvements</value>
+        </item>
+        <item>
+          <label>Clinic admin help (e.g., queue support appointment booking)</label>
+          <value>clinic_admin_help</value>
+        </item>
+        <item>
+          <label>Documentation help (ID, grants, births)</label>
+          <value>documentation_help</value>
+        </item>
+        <item>
+          <label>Income / work support (skills, trainings, job interview vouchers)</label>
+          <value>income_support</value>
+        </item>
+        <item>
+          <label>Support from community kitchen / soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Help from church / faith group</label>
+          <value>church_help</value>
+        </item>
+        <item>
+          <label>Help from neighbours / informal networks</label>
+          <value>neighbour_help</value>
+        </item>
+      </select>
+
+      <select ref="/data/support_still_2025">
+        <label>Still have in 2025</label>
+        <item>
+          <label>Clinic / healthcare when needed</label>
+          <value>clinic_healthcare</value>
+        </item>
+        <item>
+          <label>Regular medication supply (incl. chronic / ARVs)</label>
+          <value>regular_medication</value>
+        </item>
+        <item>
+          <label>HIV / TB services support</label>
+          <value>hiv_tb_support</value>
+        </item>
+        <item>
+          <label>Mental health / psychosocial support</label>
+          <value>mental_health_support</value>
+        </item>
+        <item>
+          <label>Substance use support</label>
+          <value>substance_support</value>
+        </item>
+        <item>
+          <label>Disability / rehab and support</label>
+          <value>disability_support</value>
+        </item>
+        <item>
+          <label>Community Health Worker home visits</label>
+          <value>chw_visits</value>
+        </item>
+        <item>
+          <label>Social worker support</label>
+          <value>social_worker</value>
+        </item>
+        <item>
+          <label>Food support (kitchen/parcels)</label>
+          <value>food_support</value>
+        </item>
+        <item>
+          <label>Childcare / after-school / grant help</label>
+          <value>childcare</value>
+        </item>
+        <item>
+          <label>School-based health or psychosocial support</label>
+          <value>school_health</value>
+        </item>
+        <item>
+          <label>Youth-friendly reproductive health services</label>
+          <value>youth_reproductive</value>
+        </item>
+        <item>
+          <label>Transport assistance / vouchers</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>Safety / security mediation. (e.g., neighbourhood watch, CPF, violence de-escalation)</label>
+          <value>safety_mediation</value>
+        </item>
+        <item>
+          <label>WASH improvements (water / sanitation / hygiene)</label>
+          <value>wash_improvements</value>
+        </item>
+        <item>
+          <label>Clinic admin help (e.g., queue support appointment booking)</label>
+          <value>clinic_admin_help</value>
+        </item>
+        <item>
+          <label>Documentation help (ID, grants, births)</label>
+          <value>documentation_help</value>
+        </item>
+        <item>
+          <label>Income / work support (skills, trainings, job interview vouchers)</label>
+          <value>income_support</value>
+        </item>
+        <item>
+          <label>Support from community kitchen / soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Help from church / faith group</label>
+          <value>church_help</value>
+        </item>
+        <item>
+          <label>Help from neighbours / informal networks</label>
+          <value>neighbour_help</value>
+        </item>
+      </select>
+
+      <select ref="/data/support_reduced_2025">
+        <label>Reduced in 2025?</label>
+        <item>
+          <label>Clinic / healthcare when needed</label>
+          <value>clinic_healthcare</value>
+        </item>
+        <item>
+          <label>Regular medication supply (incl. chronic / ARVs)</label>
+          <value>regular_medication</value>
+        </item>
+        <item>
+          <label>HIV / TB services support</label>
+          <value>hiv_tb_support</value>
+        </item>
+        <item>
+          <label>Mental health / psychosocial support</label>
+          <value>mental_health_support</value>
+        </item>
+        <item>
+          <label>Substance use support</label>
+          <value>substance_support</value>
+        </item>
+        <item>
+          <label>Disability / rehab and support</label>
+          <value>disability_support</value>
+        </item>
+        <item>
+          <label>Community Health Worker home visits</label>
+          <value>chw_visits</value>
+        </item>
+        <item>
+          <label>Social worker support</label>
+          <value>social_worker</value>
+        </item>
+        <item>
+          <label>Food support (kitchen/parcels)</label>
+          <value>food_support</value>
+        </item>
+        <item>
+          <label>Childcare / after-school / grant help</label>
+          <value>childcare</value>
+        </item>
+        <item>
+          <label>School-based health or psychosocial support</label>
+          <value>school_health</value>
+        </item>
+        <item>
+          <label>Youth-friendly reproductive health services</label>
+          <value>youth_reproductive</value>
+        </item>
+        <item>
+          <label>Transport assistance / vouchers</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>Safety / security mediation. (e.g., neighbourhood watch, CPF, violence de-escalation)</label>
+          <value>safety_mediation</value>
+        </item>
+        <item>
+          <label>WASH improvements (water / sanitation / hygiene)</label>
+          <value>wash_improvements</value>
+        </item>
+        <item>
+          <label>Clinic admin help (e.g., queue support appointment booking)</label>
+          <value>clinic_admin_help</value>
+        </item>
+        <item>
+          <label>Documentation help (ID, grants, births)</label>
+          <value>documentation_help</value>
+        </item>
+        <item>
+          <label>Income / work support (skills, trainings, job interview vouchers)</label>
+          <value>income_support</value>
+        </item>
+        <item>
+          <label>Support from community kitchen / soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Help from church / faith group</label>
+          <value>church_help</value>
+        </item>
+        <item>
+          <label>Help from neighbours / informal networks</label>
+          <value>neighbour_help</value>
+        </item>
+      </select>
+
+      <select ref="/data/support_need_2026">
+        <label>Need in 2026</label>
+        <item>
+          <label>Clinic / healthcare when needed</label>
+          <value>clinic_healthcare</value>
+        </item>
+        <item>
+          <label>Regular medication supply (incl. chronic / ARVs)</label>
+          <value>regular_medication</value>
+        </item>
+        <item>
+          <label>HIV / TB services support</label>
+          <value>hiv_tb_support</value>
+        </item>
+        <item>
+          <label>Mental health / psychosocial support</label>
+          <value>mental_health_support</value>
+        </item>
+        <item>
+          <label>Substance use support</label>
+          <value>substance_support</value>
+        </item>
+        <item>
+          <label>Disability / rehab and support</label>
+          <value>disability_support</value>
+        </item>
+        <item>
+          <label>Community Health Worker home visits</label>
+          <value>chw_visits</value>
+        </item>
+        <item>
+          <label>Social worker support</label>
+          <value>social_worker</value>
+        </item>
+        <item>
+          <label>Food support (kitchen/parcels)</label>
+          <value>food_support</value>
+        </item>
+        <item>
+          <label>Childcare / after-school / grant help</label>
+          <value>childcare</value>
+        </item>
+        <item>
+          <label>School-based health or psychosocial support</label>
+          <value>school_health</value>
+        </item>
+        <item>
+          <label>Youth-friendly reproductive health services</label>
+          <value>youth_reproductive</value>
+        </item>
+        <item>
+          <label>Transport assistance / vouchers</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>Safety / security mediation. (e.g., neighbourhood watch, CPF, violence de-escalation)</label>
+          <value>safety_mediation</value>
+        </item>
+        <item>
+          <label>WASH improvements (water / sanitation / hygiene)</label>
+          <value>wash_improvements</value>
+        </item>
+        <item>
+          <label>Clinic admin help (e.g., queue support appointment booking)</label>
+          <value>clinic_admin_help</value>
+        </item>
+        <item>
+          <label>Documentation help (ID, grants, births)</label>
+          <value>documentation_help</value>
+        </item>
+        <item>
+          <label>Income / work support (skills, trainings, job interview vouchers)</label>
+          <value>income_support</value>
+        </item>
+        <item>
+          <label>Support from community kitchen / soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Help from church / faith group</label>
+          <value>church_help</value>
+        </item>
+        <item>
+          <label>Help from neighbours / informal networks</label>
+          <value>neighbour_help</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/support_priority">
+        <label>Top Priority (Rank #1)</label>
+        <item>
+          <label>Clinic / healthcare when needed</label>
+          <value>clinic_healthcare</value>
+        </item>
+        <item>
+          <label>Regular medication supply (incl. chronic / ARVs)</label>
+          <value>regular_medication</value>
+        </item>
+        <item>
+          <label>HIV / TB services support</label>
+          <value>hiv_tb_support</value>
+        </item>
+        <item>
+          <label>Mental health / psychosocial support</label>
+          <value>mental_health_support</value>
+        </item>
+        <item>
+          <label>Substance use support</label>
+          <value>substance_support</value>
+        </item>
+        <item>
+          <label>Disability / rehab and support</label>
+          <value>disability_support</value>
+        </item>
+        <item>
+          <label>Community Health Worker home visits</label>
+          <value>chw_visits</value>
+        </item>
+        <item>
+          <label>Social worker support</label>
+          <value>social_worker</value>
+        </item>
+        <item>
+          <label>Food support (kitchen/parcels)</label>
+          <value>food_support</value>
+        </item>
+        <item>
+          <label>Childcare / after-school / grant help</label>
+          <value>childcare</value>
+        </item>
+        <item>
+          <label>School-based health or psychosocial support</label>
+          <value>school_health</value>
+        </item>
+        <item>
+          <label>Youth-friendly reproductive health services</label>
+          <value>youth_reproductive</value>
+        </item>
+        <item>
+          <label>Transport assistance / vouchers</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>Safety / security mediation. (e.g., neighbourhood watch, CPF, violence de-escalation)</label>
+          <value>safety_mediation</value>
+        </item>
+        <item>
+          <label>WASH improvements (water / sanitation / hygiene)</label>
+          <value>wash_improvements</value>
+        </item>
+        <item>
+          <label>Clinic admin help (e.g., queue support appointment booking)</label>
+          <value>clinic_admin_help</value>
+        </item>
+        <item>
+          <label>Documentation help (ID, grants, births)</label>
+          <value>documentation_help</value>
+        </item>
+        <item>
+          <label>Income / work support (skills, trainings, job interview vouchers)</label>
+          <value>income_support</value>
+        </item>
+        <item>
+          <label>Support from community kitchen / soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Help from church / faith group</label>
+          <value>church_help</value>
+        </item>
+        <item>
+          <label>Help from neighbours / informal networks</label>
+          <value>neighbour_help</value>
+        </item>
+      </select1>
+
+      <select ref="/data/support_lost_reasons">
+        <label>If any support was lost or reduced, what were the main reasons? (Tick up to 3)</label>
+        <item>
+          <label>Service discontinued (e.g., program ended, no longer offered)</label>
+          <value>service_discontinued</value>
+        </item>
+        <item>
+          <label>Staff shortages (e.g., fewer CHWs, nurses, social workers)</label>
+          <value>staff_shortages</value>
+        </item>
+        <item>
+          <label>Safety concerns (e.g., unsafe travel routes, violence)</label>
+          <value>safety_concerns</value>
+        </item>
+        <item>
+          <label>Stigma or discrimination (e.g., fear of judgment, exclusion)</label>
+          <value>stigma</value>
+        </item>
+        <item>
+          <label>Didn't know where to go or who to ask</label>
+          <value>dont_know</value>
+        </item>
+        <item>
+          <label>No transport / too far / too costly</label>
+          <value>no_transport</value>
+        </item>
+        <item>
+          <label>No follow-up / referral failed</label>
+          <value>no_followup</value>
+        </item>
+        <item>
+          <label>Lack of required documents (e.g., ID, proof of address)</label>
+          <value>lack_docs</value>
+        </item>
+        <item>
+          <label>Timing issues (e.g., clinic hours, long queues, conflicting responsibilities)</label>
+          <value>timing_issues</value>
+        </item>
+        <item>
+          <label>Support only available to certain groups or connected people (e.g., not open to everyone)</label>
+          <value>only_certain_groups</value>
+        </item>
+      </select>
+
+      <select ref="/data/support_lost_impact">
+        <label>How did the loss or reduction affect your household? (Tick up to 2)</label>
+        <item>
+          <label>Missed clinic visits or medication</label>
+          <value>missed_clinic</value>
+        </item>
+        <item>
+          <label>Missed school or work</label>
+          <value>missed_school_work</value>
+        </item>
+        <item>
+          <label>Increased stress or worry</label>
+          <value>increased_stress</value>
+        </item>
+        <item>
+          <label>Felt unsafe or isolated</label>
+          <value>felt_unsafe</value>
+        </item>
+        <item>
+          <label>Had to borrow money or food</label>
+          <value>borrow_money_food</value>
+        </item>
+        <item>
+          <label>Relied more on neighbours or informal help</label>
+          <value>relied_neighbours</value>
+        </item>
+        <item>
+          <label>Avoided seeking help altogether</label>
+          <value>avoided_help</value>
+        </item>
+        <item>
+          <label>Experienced worsening health or symptoms</label>
+          <value>worsening_health</value>
+        </item>
+        <item>
+          <label>Lost trust in health or social services</label>
+          <value>lost_trust</value>
+        </item>
+        <item>
+          <label>Had to rely on informal/unsafe alternatives</label>
+          <value>unsafe_alternatives</value>
+        </item>
+        <item>
+          <label>Had to rely on private and expensive alternatives</label>
+          <value>expensive_alternatives</value>
+        </item>
+        <item>
+          <label>No major impact</label>
+          <value>no_impact</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/food_support_past_3_months">
+        <label>In the last 3 months, did your household receive any food support?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/food_support_sources">
+        <label>If yes, where did the food support come from? (Tick all that apply)</label>
+        <item>
+          <label>Community kitchen or soup kitchen</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Food parcels or grocery packs</label>
+          <value>food_parcels</value>
+        </item>
+        <item>
+          <label>School feeding programme</label>
+          <value>school_feeding</value>
+        </item>
+        <item>
+          <label>Church or faith group</label>
+          <value>church</value>
+        </item>
+        <item>
+          <label>Neighbours or family</label>
+          <value>neighbours_family</value>
+        </item>
+        <item>
+          <label>Food voucher or cash</label>
+          <value>food_voucher</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select>
+
+      <select ref="/data/food_support_linkages">
+        <label>For each source of food support, did it help in any of the following ways listed in the table below? (Tick all that apply per row)</label>
+        <item>
+          <label>Made it easier or more comfortable to seek help (e.g., clinic, CHW, social worker)</label>
+          <value>easier_seek_help</value>
+        </item>
+        <item>
+          <label>Led to contact with a CHW, clinic, or other health service</label>
+          <value>contact_chw_clinic</value>
+        </item>
+        <item>
+          <label>Led to contact with a social worker, grant office, or other non-clinical support service</label>
+          <value>contact_social_worker</value>
+        </item>
+        <item>
+          <label>Helped you feel more supported or part of a caring community</label>
+          <value>feel_supported</value>
+        </item>
+        <item>
+          <label>None</label>
+          <value>none</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/food_support_comfort">
+        <label>Overall, did receiving food support make you feel more or less comfortable asking for other help (e.g., Did you feel more likely to engage with CHWs or clinics)?</label>
+        <item>
+          <label>More comfortable</label>
+          <value>more_comfortable</value>
+        </item>
+        <item>
+          <label>About the same</label>
+          <value>same</value>
+        </item>
+        <item>
+          <label>Less comfortable</label>
+          <value>less_comfortable</value>
+        </item>
+        <item>
+          <label>Not sure</label>
+          <value>not_sure</value>
+        </item>
+      </select1>
+
+      <input ref="/data/clinic_travel_time">
+        <label>How long does it usually take to travel one-way to your usual clinic or medicine pick-up point?</label>
+        <hint>minutes</hint>
+      </input>
+
+      <input ref="/data/clinic_cost">
+        <label>To what extent does it cost, a return trip to the clinic from the pick-up point?</label>
+        <hint>R ____</hint>
+      </input>
+
+      <select1 ref="/data/clinic_delay_safety">
+        <label>In the past 6 months, did you delay or avoid a clinic visit due to safety concerns or time constraints?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/clinic_delay_reason">
+        <label>If Yes, what was the main reason?</label>
+        <item>
+          <label>Unsafe area or route (e.g., gang activity, poor lighting, harassment risk)</label>
+          <value>unsafe_area</value>
+        </item>
+        <item>
+          <label>Time of day (e.g., too early, too late, unsafe hours)</label>
+          <value>time_of_day</value>
+        </item>
+        <item>
+          <label>Caregiving or work responsibilities made it hard to go</label>
+          <value>caregiving_work</value>
+        </item>
+        <item>
+          <label>Both safety and time constraints</label>
+          <value>both</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/clinic_turn_back">
+        <label>In the past 14 days, did you turn back on the way to a clinic or pharmacy because it felt unsafe?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/communication_respect">
+        <label>Thinking about your last interaction with a healthcare provider or CHW, how much do you agree with the following statements? (Tick one in the table below per row)</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Not Applicable / Can't recall</label>
+          <value>na</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/issue_addressed">
+        <label>Was your issue or need addressed during that interaction?</label>
+        <item>
+          <label>Yes, fully: The health worker listened, responded appropriately, and the issue was resolved without needing further follow-up.</label>
+          <value>yes_fully</value>
+        </item>
+        <item>
+          <label>Partly: Some help was given, but the issue was not fully resolved, or the response felt incomplete.</label>
+          <value>partly</value>
+        </item>
+        <item>
+          <label>No: The issue was not addressed, or the interaction left the respondent feeling dismissed, unheard, or unsupported.</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Not applicable / Can't recall: The respondent does not remember the interaction clearly or did not raise an issue.</label>
+          <value>na</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/trust_health_workers">
+        <label>How much do you trust health workers at your local clinic to do their best to help you and the community?</label>
+        <item>
+          <label>Complete trust: I believe they consistently act in the best interest of patients and the community, even under pressure.</label>
+          <value>complete_trust</value>
+        </item>
+        <item>
+          <label>Mostly: I generally trust them, but there are occasional concerns or inconsistencies.</label>
+          <value>mostly</value>
+        </item>
+        <item>
+          <label>Unsure: I'm not certain; I've had mixed experiences or limited contact.</label>
+          <value>unsure</value>
+        </item>
+        <item>
+          <label>Not much: I often feel they don't listen, follow through, or treat people fairly.</label>
+          <value>not_much</value>
+        </item>
+        <item>
+          <label>No trust: I do not believe they act in the community's best interest or treat people with respect.</label>
+          <value>no_trust</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/input_opportunity">
+        <label>In the past 12 months, did you have an opportunity to give input on clinic services (meeting, WhatsApp, suggestion box)?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/input_feedback">
+        <label>If Yes, did you receive any feedback?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/problem_solving_channels">
+        <label>When your household faces a health or social problem, how helpful are the following people or groups in the table below? (Tick how helpful they are in the columns below)</label>
+        <item>
+          <label>Helps everyone</label>
+          <value>helps_everyone</value>
+        </item>
+        <item>
+          <label>Helps only some people</label>
+          <value>helps_some</value>
+        </item>
+        <item>
+          <label>Not a reliable helper</label>
+          <value>not_reliable</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/last_resolved_problem">
+        <label>Thinking about the last health or social problem your household faced that was actually resolved, who helped solve it? (Tick one)</label>
+        <item>
+          <label>Myself or a family member</label>
+          <value>myself_family</value>
+        </item>
+        <item>
+          <label>Community Health Worker (CHW)</label>
+          <value>chw</value>
+        </item>
+        <item>
+          <label>Clinic staff (nurse, doctor, clerk)</label>
+          <value>clinic_staff</value>
+        </item>
+        <item>
+          <label>Clinic or Health Committee</label>
+          <value>clinic_committee</value>
+        </item>
+        <item>
+          <label>Phone or WhatsApp to clinic</label>
+          <value>phone_whatsapp</value>
+        </item>
+        <item>
+          <label>Ward councillor or community leader</label>
+          <value>ward_councillor</value>
+        </item>
+        <item>
+          <label>Neighbours</label>
+          <value>neighbours</value>
+        </item>
+        <item>
+          <label>Volunteer network</label>
+          <value>volunteer_network</value>
+        </item>
+        <item>
+          <label>Local charity or NGO</label>
+          <value>local_ngo</value>
+        </item>
+        <item>
+          <label>Church, mosque, or faith group</label>
+          <value>faith_group</value>
+        </item>
+        <item>
+          <label>Community kitchen or support group</label>
+          <value>community_kitchen</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+        <item>
+          <label>It never got solved</label>
+          <value>never_solved</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/promise_completion">
+        <label>In the last 90 days, did a CHW or clinic promise to do something for your household (e.g., referral, call back, document help)?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/promise_completed">
+        <label>If Yes, was it completed?</label>
+        <item>
+          <label>Yes, within 7 days</label>
+          <value>yes_7_days</value>
+        </item>
+        <item>
+          <label>Yes, within 30 days</label>
+          <value>yes_30_days</value>
+        </item>
+        <item>
+          <label>Yes, after 30+ days</label>
+          <value>yes_30_plus</value>
+        </item>
+        <item>
+          <label>Not completed</label>
+          <value>not_completed</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/promise_who_completed">
+        <label>Who completed it?</label>
+        <item>
+          <label>CHW</label>
+          <value>chw</value>
+        </item>
+        <item>
+          <label>Clinic staff</label>
+          <value>clinic_staff</value>
+        </item>
+        <item>
+          <label>Committee</label>
+          <value>committee</value>
+        </item>
+        <item>
+          <label>NGO / Faith group</label>
+          <value>ngo_faith</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/promise_informed">
+        <label>Did anyone inform you of the outcome?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select ref="/data/chronic_conditions">
+        <label>Which long-term health conditions are present in your household? (Tick all that apply)</label>
+        <item>
+          <label>Asthma or chronic chest/breathing problem (COPD)</label>
+          <value>asthma_copd</value>
+        </item>
+        <item>
+          <label>Cancer (ongoing care or treatment in the past 12 months)</label>
+          <value>cancer</value>
+        </item>
+        <item>
+          <label>Depression, anxiety or other ongoing mental health problem</label>
+          <value>depression_anxiety</value>
+        </item>
+        <item>
+          <label>Diabetes (sugar disease)</label>
+          <value>diabetes</value>
+        </item>
+        <item>
+          <label>Epilepsy (fits/seizures)</label>
+          <value>epilepsy</value>
+        </item>
+        <item>
+          <label>Harmful alcohol or drug use (ongoing)</label>
+          <value>alcohol_drug</value>
+        </item>
+        <item>
+          <label>High blood pressure (hypertension)</label>
+          <value>hypertension</value>
+        </item>
+        <item>
+          <label>HIV</label>
+          <value>hiv</value>
+        </item>
+        <item>
+          <label>TB (Tuberculosis)</label>
+          <value>tb</value>
+        </item>
+        <item>
+          <label>Disability or rehabilitation need after stroke/injury</label>
+          <value>disability</value>
+        </item>
+        <item>
+          <label>None of the above</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>Don't know/Prefer not to say</label>
+          <value>dont_know</value>
+        </item>
+      </select>
+
+      <select ref="/data/chronic_on_treatment">
+        <label>For each condition you ticked above, is anyone in the household currently on treatment/regular medicine for that condition?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Don't Know</label>
+          <value>dont_know</value>
+        </item>
+        <item>
+          <label>Prefer not to say</label>
+          <value>prefer_not</value>
+        </item>
+      </select>
+
+      <select ref="/data/chronic_medication_support">
+        <label>In the past 6 months, did anyone in the household receive any of the following support for managing their chronic medicines? (Tick all that apply)</label>
+        <item>
+          <label>Medication delivery or pick-up assistance</label>
+          <value>medication_delivery</value>
+        </item>
+        <item>
+          <label>SMS or phone reminders</label>
+          <value>sms_reminders</value>
+        </item>
+        <item>
+          <label>CHW home visit</label>
+          <value>chw_visit</value>
+        </item>
+        <item>
+          <label>Peer/support group or club (e.g., adherence/collection club)</label>
+          <value>peer_group</value>
+        </item>
+        <item>
+          <label>Transport assistance</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>None</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>Don't know</label>
+          <value>dont_know</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/hiv_test_past_year">
+        <label>Has anyone in the household had an HIV test in the past 12 months?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Don't know/Prefer not to say</label>
+          <value>dont_know</value>
+        </item>
+      </select1>
+
+      <select ref="/data/hiv_self_screen_offer">
+        <label>Has anyone in the household been offered HIV self-screening or testing in the past 12 months? (Tick one per row)</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Don't know</label>
+          <value>dont_know</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/tb_screen_past_year">
+        <label>Has anyone in the household been screened for TB (symptom screen or test) in the past 12 months?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Don't know</label>
+          <value>dont_know</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/art_tb_current">
+        <label>Is anyone in the household currently on ART (HIV treatment) or TB Treatment?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Don't know/Prefer not to say</label>
+          <value>dont_know</value>
+        </item>
+      </select1>
+
+      <select ref="/data/art_tb_support">
+        <label>In the past 6 months, did anyone on ART or TB treatment receive any of the following support? (Tick all that apply)</label>
+        <item>
+          <label>Medication delivery or pick-up assistance</label>
+          <value>medication_delivery</value>
+        </item>
+        <item>
+          <label>SMS or phone reminders</label>
+          <value>sms_reminders</value>
+        </item>
+        <item>
+          <label>CHW home visit</label>
+          <value>chw_visit</value>
+        </item>
+        <item>
+          <label>Peer or support group</label>
+          <value>peer_support</value>
+        </item>
+        <item>
+          <label>Transport assistance</label>
+          <value>transport_assistance</value>
+        </item>
+        <item>
+          <label>None</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>Don't know</label>
+          <value>dont_know</value>
+        </item>
+      </select>
+
+      <select ref="/data/art_tb_miss_reasons">
+        <label>In the past 3 months, did anyone in the household miss ART or TB doses due to any of the following reasons? (Tick all that apply - limit to top 5 options)</label>
+        <item>
+          <label>Clinic stock-out</label>
+          <value>stock_out</value>
+        </item>
+        <item>
+          <label>Couldn't afford transport</label>
+          <value>afford_transport</value>
+        </item>
+        <item>
+          <label>Long queues or time constraints</label>
+          <value>long_queues</value>
+        </item>
+        <item>
+          <label>Forgot or ran out of medication</label>
+          <value>forgot</value>
+        </item>
+        <item>
+          <label>Felt better or had side effects</label>
+          <value>felt_better</value>
+        </item>
+        <item>
+          <label>Stigma or privacy concerns</label>
+          <value>stigma</value>
+        </item>
+        <item>
+          <label>Safety concerns while traveling</label>
+          <value>safety</value>
+        </item>
+        <item>
+          <label>None</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>other</value>
+        </item>
+      </select>
+
+      <select1 ref="/data/medicine_miss_food">
+        <label>In the past 7 days, did anyone miss or delay medicine because there was no food at dose time?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/clinic_committee_heard">
+        <label>Have you heard of a clinic/health committee for your local clinic?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Not sure</label>
+          <value>not_sure</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/clinic_committee_hear_how">
+        <label>How did you first hear about the clinic/health committee for your local clinic?</label>
+        <item>
+          <label>Through a CHW</label>
+          <value>through_chw</value>
+        </item>
+        <item>
+          <label>At the clinic</label>
+          <value>at_clinic</value>
+        </item>
+        <item>
+          <label>Neighbour/friend</label>
+          <value>neighbour</value>
+        </item>
+        <item>
+          <label>Church/community meeting</label>
+          <value>church_meeting</value>
+        </item>
+        <item>
+          <label>NGO/community organisation</label>
+          <value>ngo</value>
+        </item>
+        <item>
+          <label>Other (specify)</label>
+          <value>other</value>
+        </item>
+        <item>
+          <label>N/A</label>
+          <value>na</value>
+        </item>
+      </select1>
+
+      <select1 ref="/data/clinic_committee_help">
+        <label>H.63   Has the clinic/health committee (or its members) ever helped you or your household with an issue?</label>
+        <item>
+          <label>Yes</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>no</value>
+        </item>
+        <item>
+          <label>Not applicable</label>
+          <value>na</value>
+        </item>
+      </select1>
+
+    </group>
+  </body>
+</h:html>
+        <

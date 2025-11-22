@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Control Dashboard - MitchNBugXNacosa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .stat-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .chart-placeholder {
+            height: 300px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px dashed #ccc;
+        }
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        .filter-section select, .filter-section input {
+            margin-right: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quality Control Dashboard</h1>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Total Submissions</h3>
+                <p id="total-submissions">0</p>
+            </div>
+            <div class="stat-box">
+                <h3>Pending Review</h3>
+                <p id="pending-review">0</p>
+            </div>
+            <div class="stat-box">
+                <h3>Approved</h3>
+                <p id="approved">0</p>
+            </div>
+            <div class="stat-box">
+                <h3>Flagged</h3>
+                <p id="flagged">0</p>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <label for="form-select">Select Form:</label>
+            <select id="form-select">
+                <option value="all">All Forms</option>
+                <option value="full-survey">Full Survey</option>
+                <option value="test-form">Test Form</option>
+            </select>
+
+            <label for="date-from">From:</label>
+            <input type="date" id="date-from">
+
+            <label for="date-to">To:</label>
+            <input type="date" id="date-to">
+
+            <button onclick="filterSubmissions()">Filter</button>
+        </div>
+
+        <h2>Recent Submissions</h2>
+        <table id="submissions-table">
+            <thead>
+                <tr>
+                    <th>Submission ID</th>
+                    <th>Form</th>
+                    <th>Respondent</th>
+                    <th>Submission Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Submissions will be populated here -->
+            </tbody>
+        </table>
+
+        <h2>Data Quality Metrics</h2>
+        <div class="chart-placeholder">
+            <p>Chart Placeholder: Completion Rates Over Time</p>
+        </div>
+
+        <div class="chart-placeholder">
+            <p>Chart Placeholder: Response Distribution by Question</p>
+        </div>
+
+        <div class="chart-placeholder">
+            <p>Chart Placeholder: Geographic Distribution of Submissions</p>
+        </div>
+    </div>
+
+    <script>
+        // Placeholder data - in a real implementation, this would fetch from the backend API
+        const sampleSubmissions = [
+            { id: '001', form: 'Full Survey', respondent: 'Household A', date: '2024-11-20', status: 'Pending' },
+            { id: '002', form: 'Test Form', respondent: 'Household B', date: '2024-11-19', status: 'Approved' },
+            { id: '003', form: 'Full Survey', respondent: 'Household C', date: '2024-11-18', status: 'Flagged' }
+        ];
+
+        function loadSubmissions() {
+            const tbody = document.getElementById('submissions-table').querySelector('tbody');
+            tbody.innerHTML = '';
+
+            sampleSubmissions.forEach(submission => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${submission.id}</td>
+                    <td>${submission.form}</td>
+                    <td>${submission.respondent}</td>
+                    <td>${submission.date}</td>
+                    <td>${submission.status}</td>
+                    <td>
+                        <button onclick="viewSubmission('${submission.id}')">View</button>
+                        <button onclick="approveSubmission('${submission.id}')">Approve</button>
+                        <button onclick="flagSubmission('${submission.id}')">Flag</button>
+                    </td>
+                `;
+            });
+
+            updateStats();
+        }
+
+        function updateStats() {
+            document.getElementById('total-submissions').textContent = sampleSubmissions.length;
+            document.getElementById('pending-review').textContent = sampleSubmissions.filter(s => s.status === 'Pending').length;
+            document.getElementById('approved').textContent = sampleSubmissions.filter(s => s.status === 'Approved').length;
+            document.getElementById('flagged').textContent = sampleSubmissions.filter(s => s.status === 'Flagged').length;
+        }
+
+        function filterSubmissions() {
+            // Placeholder for filtering logic
+            console.log('Filtering submissions...');
+            loadSubmissions();
+        }
+
+        function viewSubmission(id) {
+            alert(`Viewing submission ${id}`);
+        }
+
+        function approveSubmission(id) {
+            alert(`Approving submission ${id}`);
+        }
+
+        function flagSubmission(id) {
+            alert(`Flagging submission ${id}`);
+        }
+
+        // Load data on page load
+        window.onload = loadSubmissions;
+    </script>
+</body>
+</html>
